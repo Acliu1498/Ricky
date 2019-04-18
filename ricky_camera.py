@@ -23,9 +23,11 @@ from cv_bridge import CvBridge, CvBridgeError
 import rospy
 import intera_interface
 import os
+import ricky_movement as rm
+from cascade_detection import RunPictureIdentifier as rpi
 
 
-def take_picture(camera='head_camera', raw=False, edge=False, gain=-1, exposure=-1):
+def find(camera='head_camera', raw=False, edge=False, gain=-1, exposure=-1):
     # rospy.init_node('camera_display', anonymous=True)
     cameras = intera_interface.Cameras()
     if not cameras.verify_camera_exists(camera):
@@ -53,6 +55,8 @@ def take_picture(camera='head_camera', raw=False, edge=False, gain=-1, exposure=
 
     rospy.on_shutdown(clean_shutdown)
     rospy.loginfo("Camera_display node running. Ctrl-c to quit")
+    cameras.stop_streaming(camera)
+    print('done')
 
 
 def save_image_callback(img_data, edge_detection):
@@ -69,12 +73,18 @@ def save_image_callback(img_data, edge_detection):
         # in function cv2.Canny if needed
         get_edge = cv2.Canny(blurred, 10, 100)
         cv_image = np.hstack([get_edge])
-    edge_str = "(Edge Detection)" if edge_detection else ''
-    cv_win_name = ' '.join(["ehe", edge_str])
-    cv2.namedWindow(cv_win_name, 0)
-    cv2.imshow('img', cv_image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    cv2.imwrite('/home/alex/ros_ws/src/intera_sdk/intera_examples/scripts/img/img.png', cv_image)
+
+
+def read(file_path):
+    img = cv2.imread(file_path)
+    return rpi.cascade_img(img)
+
+
+def show(file_path):
+    img = cv2.imread(file_path, 0)
+    cv2.imshow('img', img)
+    cv2.waitKey(3)
 
 
 def display_img():

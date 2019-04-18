@@ -103,21 +103,27 @@ def new_pose(position, orientation):
     return poses
 
 
+# function to close the gripper
 def close_gripper():
     gripper = intera_interface.Gripper('right_gripper')
+    # calibrate gripper if necessary
     if not gripper.is_calibrated():
         gripper.calibrate()
     gripper.close()
 
 
+# function to open the gripper
 def open_gripper():
     gripper = intera_interface.Gripper('right_gripper')
+    # calibrate gripper if necessary
     if not gripper.is_calibrated():
         gripper.calibrate()
     gripper.open()
 
 
-# function to read a set of movements from a json file
+''' 
+function to read a set of movements from a json file
+'''
 def read_from_json(file):
     with open(file) as json_file:
         data = json.load(json_file)
