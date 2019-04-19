@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ricky_camera.py &mdash; Ricky 0.01 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ricky_external_camera.py" href="ricky_external_camera.html" />
+    <link rel="prev" title="ricky_movement.py" href="ricky_movement.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ricky
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Python Files:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ricky_movement.html">ricky_movement.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ricky_camera.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#take-picture-camera-raw-edge-gain-exposure">take_picture(camera, raw, edge, gain, exposure)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ricky_external_camera.html">ricky_external_camera.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">ocr.py</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ricky</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ricky_camera.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/python_files/ricky_camera.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ricky-camera-py">
+<h1>ricky_camera.py<a class="headerlink" href="#ricky-camera-py" title="Permalink to this headline">¶</a></h1>
+<p>This file contains functions that can be called to interact with Ricky’s built in cameras. For more information on the interface in which these functions interact you can find more information <a class="reference external" href="https://rethinkrobotics.github.io/intera_sdk_docs/5.1.0/intera_interface/html/index.html">here</a>.</p>
+<div class="section" id="take-picture-camera-raw-edge-gain-exposure">
+<h2>take_picture(camera, raw, edge, gain, exposure)<a class="headerlink" href="#take-picture-camera-raw-edge-gain-exposure" title="Permalink to this headline">¶</a></h2>
+<p>This method is can be used to take a picture using the given camera. The location of the image can be found at ~ros_ws/src/intera_sdk/intera_examples/scripts/img/img.png, this location can be changed however by changing the imwrite location in show_image_callback</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>camera=’head_camera’:</dt><dd><ul>
+<li><p>The name of the camera you wish to use.</p></li>
+<li><p>This camera must be recognized by the intera sdk</p></li>
+<li><p>To see which cameras are available call list_cameras provided by the intera_interface.camera.Cameras interface</p></li>
+<li><p>If No camera is provided, this function will use the head camera.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>raw=False:</dt><dd><ul>
+<li><p>If this values is false the image will be rectified, if true then it will not</p></li>
+<li><p>This value is false by default</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>edge=False:</dt><dd><ul>
+<li><p>If this value is true canny edge detection will be used when taking the picture</p></li>
+<li><p>This value is false by default</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ricky_external_camera.html" class="btn btn-neutral float-right" title="ricky_external_camera.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ricky_movement.html" class="btn btn-neutral float-left" title="ricky_movement.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Alex Liu, Jared Bitanga
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

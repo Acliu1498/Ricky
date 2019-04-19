@@ -106,6 +106,7 @@ def new_pose(position, orientation):
 # function to close the gripper
 def close_gripper():
     gripper = intera_interface.Gripper('right_gripper')
+
     # calibrate gripper if necessary
     if not gripper.is_calibrated():
         gripper.calibrate()
@@ -144,5 +145,5 @@ def read_from_json(file):
             elif m['action'] == 'take_pic':
                 rc.take_picture(m['camera'])
 
-
-            rospy.sleep(0.1)
+            if 'comment' in m:
+                rospy.loginfo(m['comment'])
