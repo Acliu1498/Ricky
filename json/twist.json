@@ -1,0 +1,72 @@
+[
+  {
+    "action": "move",
+    "position": {
+      "x": 0.745621114329,
+      "y": 0.335473283004,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.552564615115,
+      "y": -0.451083218777,
+      "z": 0.486264441233,
+      "w": 0.504720882324
+    },
+    "speed": 0.2,
+    "comment": "approach for twist"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.02,
+      "y": -0.11,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.537230989389,
+      "y": -0.451841935591,
+      "z": 0.465676661956,
+      "w": 0.538857101457
+    },
+    "speed": 0.1,
+    "comment": "go in for twist"
+  },
+  {
+    "action": "close_grip"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "orientation": {
+      "x": 0.16,
+      "y": 0.46,
+      "z": -0.47,
+      "w": 0.2
+    },
+    "speed": 0.2,
+    "comment": "twist"
+  },
+  {
+    "action": "open_grip"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.739086685334,
+      "y": 0.34313743578,
+      "z": -0.0133319844317
+    },
+    "orientation": {
+      "x": 0.700635603013,
+      "y": 0.0340351773914,
+      "z": 0.0322104077388,
+      "w": 0.711978825615
+    },
+    "speed": 0.2,
+    "comment": "retract"
+  }
+]

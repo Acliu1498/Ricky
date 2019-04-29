@@ -1,0 +1,151 @@
+[
+  {
+    "action": "move_joint",
+    "joint_angles": {
+      "right_j6": -0.6446796875,
+      "right_j5": 2.5309423828125,
+      "right_j4": -0.9273115234375,
+      "right_j3": -1.0927255859375,
+      "right_j2": 0.4827412109375,
+      "right_j1": -0.1101298828125,
+      "right_j0": -0.0570048828125
+    },
+    "speed": 0.2,
+    "comment": "raise over platform"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.7732903762,
+      "y": -0.0806500177583,
+      "z": 0.134275144289
+    },
+    "orientation": {
+      "x": -0.652410864105,
+      "y": 0.757392096284,
+      "z": 0.0184357254859,
+      "w": -0.019426809075
+    },
+    "speed": 0.1,
+    "comment": "place on platform"
+  },
+  {
+    "action": "open_grip"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.77329794189,
+      "y": -0.0781030363456,
+      "z": 0.381065004511
+    },
+    "orientation": {
+      "x": -0.688596510889,
+      "y": 0.724793052076,
+      "z": -0.00938046409961,
+      "w": -0.0205398088529
+    },
+    "speed": 0.1,
+    "comment": "retract"
+  },
+  {
+    "action": "move_joint",
+    "joint_angles": {
+      "right_j6": -0.668525390625,
+      "right_j5": 2.070021484375,
+      "right_j4": -1.6194541015625,
+      "right_j3": -1.3202783203125,
+      "right_j2": -0.175390625,
+      "right_j1": 0.453384765625,
+      "right_j0": 0.3032001953125
+    },
+    "speed": 0.2,
+    "comment": "move_for_align"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.745621114329,
+      "y": 0.335473283004,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.552564615115,
+      "y": -0.451083218777,
+      "z": 0.486264441233,
+      "w": 0.504720882324
+    },
+    "speed": 0.2,
+    "comment": "approach for grab"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.02,
+      "y": -0.09,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.537230989389,
+      "y": -0.451841935591,
+      "z": 0.465676661956,
+      "w": 0.538857101457
+    },
+    "speed": 0.1,
+    "comment": "go in for grab"
+  },
+  {
+    "action": "close_grip"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.00,
+      "y": 0.00,
+      "z": 0.04
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "push"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.00,
+      "y": -0.06,
+      "z": 0.00
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "push"
+  },
+  {
+    "action": "open_grip"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.00,
+      "y": 0.04,
+      "z": 0.00
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "pull out"
+  }
+]

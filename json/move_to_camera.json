@@ -1,0 +1,70 @@
+[
+  {
+    "action": "move",
+    "position": {
+      "x": 0.800791068066,
+      "y": -0.404277245659,
+      "z": 0.287208086626
+    },
+    "orientation": {
+      "x": 0.520689535899,
+      "y": -0.517671026556,
+      "z": 0.417985299895,
+      "w": 0.534964862904
+    },
+    "speed": 0.2,
+    "comment": "raise over platform"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.0,
+      "y": -0.055,
+      "z": -0.0
+    },
+    "orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "speed": 0.05,
+    "comment": "raise over platform"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": -0.165208086626
+    },
+    "orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "speed": 0.05,
+    "comment": "raise over platform"
+  },
+  {
+    "action": "open_grip",
+    "comment": "place"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.0,
+      "y": 0.15,
+      "z": 0.0
+    },
+    "orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "speed": 0.05,
+    "comment": "raise over platform"
+  }
+]

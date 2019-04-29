@@ -36,27 +36,11 @@ def move_to(limb, position, orientation, speed):
     rospy.loginfo(joint_solution)
     # set arm joint positions to solution
     arm = intera_interface.Limb(limb)
-
+    # set speed of move
     arm.set_joint_position_speed(speed)
     arm.move_to_joint_positions(joint_solution, timeout=5, threshold=0.01)
 
     rospy.loginfo('Move complete')
-
-
-# helper method to compare the arm position to the desired position
-def compare_poses(arm, pose):
-    for attr, value in arm.endpoint_pose()['position'].__dict__.iteritems():
-        if not (pose[attr] - 0.02) < value < (pose[attr] + 0.02):
-            return False
-    return True
-
-
-# helper methood to compare orientations
-def compare_orientations(arm, pose):
-    for attr, value in arm.endpoint_pose()['orientation'].__dict__.iteritems():
-        if not (pose[attr] - 0.005) < value < (pose[attr] + 0.005):
-            return False
-    return True
 
 
 def move_relative(limb='right',
@@ -134,6 +118,7 @@ def read_from_json(file):
                 move_to('right', m["position"], m['orientation'], m['speed'])
             # moves joints to respective positions
             elif m['action'] == 'move_joint':
+                intera_interface.Limb('right').set_joint_position_speed(m['speed'])
                 intera_interface.Limb('right').move_to_joint_positions(m['joint_angles'])
             # moves relative to its current location
             elif m['action'] == 'move_relative':

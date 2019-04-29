@@ -1,0 +1,35 @@
+[
+  {
+    "action": "move_joint",
+    "joint_angles": {
+      "right_j6": -1.607951171875,
+      "right_j5": -1.11466796875,
+      "right_j4": -2.2154365234375,
+      "right_j3": -1.9648388671875,
+      "right_j2": 3.0355654296875,
+      "right_j1": -0.688353515625,
+      "right_j0": -0.6191943359375
+    }
+  },
+  {
+    "action": "find",
+    "object": "landmark",
+    "camera": "right_hand_camera"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.02,
+      "y": -0.09,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.537230989389,
+      "y": -0.451841935591,
+      "z": 0.465676661956,
+      "w": 0.538857101457
+    },
+    "speed": 0.1 ,
+    "comment": "move to pick up"
+  }
+]

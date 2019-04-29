@@ -1,0 +1,238 @@
+[
+  {
+    "action": "move",
+    "position": {
+      "x": 0.745621114329,
+      "y": 0.335473283004,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.552564615115,
+      "y": -0.451083218777,
+      "z": 0.486264441233,
+      "w": 0.504720882324
+    },
+    "speed": 0.2,
+    "comment": "approach for twist"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.02,
+      "y": -0.13,
+      "z": -0.0116222605202
+    },
+    "orientation": {
+      "x": 0.537230989389,
+      "y": -0.451841935591,
+      "z": 0.465676661956,
+      "w": 0.538857101457
+    },
+    "speed": 0.1,
+    "comment": "go in for twist"
+  },
+  {
+    "action": "close_grip"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.00,
+      "y": 0.00,
+      "z": 0.04
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "lift up"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.00,
+      "y": -0.04,
+      "z": 0.0
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "push"
+  },
+  {
+    "action": "open_grip"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.00,
+      "y": 0.09,
+      "z": 0.00
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "push"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 0.3
+    },
+    "orientation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "speed": 0.1,
+    "comment": "pickup mortar"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.758915523104,
+      "y": -0.0658518282539,
+      "z": 0.443458077655
+    },
+    "orientation": {
+      "x": 0.753848479413,
+      "y": -0.655864752571,
+      "z": -0.038200885457,
+      "w": 0.00972567592795
+    },
+    "speed": 0.3,
+    "comment": "approach mortar"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.727375730785,
+      "y": -0.171937573714,
+      "z": 0.097389924008
+    },
+    "orientation": {
+      "x": -0.672976620208,
+      "y": 0.734837914347,
+      "z": -0.0755023271213,
+      "w": 0.0376179065188
+    },
+    "speed": 0.1,
+    "comment": "pickup mortar"
+  },
+  {
+    "action": "close_grip"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.758915523104,
+      "y": -0.0658518282539,
+      "z": 0.443458077655
+    },
+    "orientation": {
+      "x": 0.753848479413,
+      "y": -0.655864752571,
+      "z": -0.038200885457,
+      "w": 0.00972567592795
+    },
+    "speed": 0.1,
+    "comment": "retract"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.822223270182,
+      "y": -0.381404616496,
+      "z": 0.325524894222
+    },
+    "orientation": {
+      "x": 0.546076089415,
+      "y": -0.529947847701,
+      "z": 0.476902704215,
+      "w": 0.439951423631
+    },
+    "speed": 0.1,
+    "comment": "retract"
+  },
+  {
+    "action": "move",
+    "position": {
+      "x": 0.769045499417,
+      "y": -0.494386225282,
+      "z": 0.144059963136
+    },
+    "orientation": {
+      "x": 0.591081235502,
+      "y": -0.574705604375,
+      "z": 0.391184693568,
+      "w": 0.385913438372
+    },
+    "speed": 0.1,
+    "comment": "place"
+  },
+  {
+    "action": "open_grip"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.0,
+      "y": 0.02,
+      "z": 0.0
+    },
+    "orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "speed": 0.1,
+    "comment": "retract"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.2
+    },
+    "orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "speed": 0.1,
+    "comment": "retract"
+  },
+  {
+    "action": "move_relative",
+    "position": {
+      "x": 0.0,
+      "y": 0.04,
+      "z": 0.0
+    },
+    "orientation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "speed": 0.1,
+    "comment": "retract"
+  }
+]
