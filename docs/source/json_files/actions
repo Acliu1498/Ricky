@@ -1,6 +1,8 @@
 Actions
 =======
-The current supported actions are:
+When formatting the action object the first key is "action" and its value is a string.
+
+The current supported values for the action key are:
 
 - move
 - move_joint
@@ -9,12 +11,53 @@ The current supported actions are:
 - open_grip
 - take_pic
 
+Additionally, every action can be given a comment key that is used as a description of the action object.
+
 move
 -------
 The move action moves the right limb to the desired point using inverse kinematics. To use move the other keys that must be included are:
 
-- position: {'x': ,'y': , 'z': }
+- position: {'x': float, 'y': float, 'z': float}
     - This is the desired 3D point
 
-- orientation: {'x': ,'y': , 'z': , 'w': }
-    - This is the desired
+- orientation: {'x': float, 'y': float, 'z': float, 'w': float}
+    - This is the desired orientation
+
+- speed: int
+    - How fast the action will be executed
+
+move_joint
+----------
+The move_joint action moves the arm to exact joint rotation provided.
+
+- joint_angles: {"right_j6": float, "right_j5": float, "right_j4": float, "right_j3": float, "right_j2": float, "right_j1": float, "right_j0": float}
+    - the rotation of each joint in the arm.
+
+- speed: int
+    - How fast the action will be executed
+
+move_relative
+-------------
+The move_relative action moves the arm relative to its current position.
+
+- position: {'x': float, 'y': float, 'z': float}
+    - This is the desired change from current point
+
+- orientation: {'x': float, 'y': float, 'z': float, 'w': float}
+    - This is the desired change from the current orientation
+
+- speed: int
+    - How fast the action will be executed
+
+close_grip
+----------
+closes the gripper
+
+open_grip
+---------
+opens the gripper
+
+
+
+
+

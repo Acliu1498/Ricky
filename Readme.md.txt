@@ -23,58 +23,30 @@ Once done, Ricky's screen should look like this:
 
 Second, setup the correct networking requirements to interface with Ricky, to do so follow the guide [here](http://sdk.rethinkrobotics.com/intera/Networking).
 
-Third, create a new catkin package within the ros_ws folder created in the intera workstation setup and place all of the python files within this repository in there.
+Finally, create a new catkin package within the ros_ws folder created in the intera workstation setup and place all of the python files within this repository in there. 
 
-## Running the tests
+## Running the code on ricky
 
-To test the application
+To run your program on ricky first ensure that you are correctly networking with ricky by checking this guide [here](http://sdk.rethinkrobotics.com/intera/Networking) under the direct network configuration section
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+From there open a new terminal instance and enter the follwing commands:
 ```
-Give an example
+# enter your ros workspace
+cd ros_ws
+# start the intera script
+.\intera.sh
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
+After that run your code by opening a new terminal instance and enter the following commands:
 ```
-Give an example
+cd ros_ws
+
+rosrun *name of ricky catkin package* *name of desired program*
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alex Liu** - *Initial work* - [Acliu1498](https://github.com/Acliu1498)
+* **Jared Bitanga** - *Initial work* - [BWallStreet](https://github.com/BWallStreet)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
