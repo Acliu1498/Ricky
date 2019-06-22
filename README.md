@@ -43,6 +43,11 @@ cd ros_ws
 rosrun *name of ricky catkin package* *name of desired program*
 ```
 
+## Documentation
+The api documentation can be viewed in the git repo under api_rst_docs
+
+Additional the docs folder uses sphinx to build html versions off the rsts for possible hosting.
+
 ## Authors
 
 * **Alex Liu** - *Initial work* - [Acliu1498](https://github.com/Acliu1498)
